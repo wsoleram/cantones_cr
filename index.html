@@ -55,8 +55,15 @@
 	  popupContent += 0; 
 	}
 	layer.bindPopup(popupContent);
+      }	 
+        if (feature.properties && feature.properties.NCANTON) {
+	  popupContent += feature.properties.NCANTON;
+	} else {
+	  popupContent += 0; 
+	}
+	layer.bindPopup(popupContent);
       }	    	    
-	    
+
       var cantonescr = L.geoJson(cantones, {
         style: function (feature) {
 	  return {
