@@ -56,17 +56,7 @@
 	}
 	layer.bindPopup(popupContent);
       }
-	function nombre(feature, layer) {    
-        var popupContent = "Nombre del canton: ";
-        if (feature.properties && feature.properties.NCANTON) {
-	  popupContent += feature.properties.NCANTON;
-	} else {
-	  popupContent += 0; 
-	}
-	layer.bindPopup(popupContent);
-      }	 
-        onEachFeature: poblacion
-	onEachFeature: nombre
+	       
 
       var cantonescr = L.geoJson(cantones, {
         style: function (feature) {
@@ -80,7 +70,8 @@
           };
         }
 	      
-	
+	onEachFeature: poblacion
+
 	      
       })
       cantonescr.addTo(mapa);
