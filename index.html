@@ -55,7 +55,9 @@
 	  popupContent += 0; 
 	}
 	layer.bindPopup(popupContent);
-      }, 
+      }
+	function nombre(feature, layer) {    
+        var popupContent = "Nombre del canton: ";
         if (feature.properties && feature.properties.NCANTON) {
 	  popupContent += feature.properties.NCANTON;
 	} else {
@@ -76,7 +78,9 @@
           };
         },
 	      
-	onEachFeature: poblacion
+	onEachFeature: poblacion,
+	onEachFeature: nombre
+	      
       })
       cantonescr.addTo(mapa);
 	   
