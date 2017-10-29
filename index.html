@@ -57,7 +57,6 @@
 	layer.bindPopup(popupContent);
       }
 	       
-
       var cantonescr = L.geoJson(cantones, {
         style: function (feature) {
 	  return {
@@ -70,12 +69,11 @@
           };
         }
 	      
-	onEachFeature: poblacion
-
+      onEachFeature: poblacion   
 	      
       })
       cantonescr.addTo(mapa);
-	   
+     
         	    
       var baseLayers = {
 	"OpenStreetMap": osm,
